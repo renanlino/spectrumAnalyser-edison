@@ -10,6 +10,8 @@ Also, with some adaptations this program works with Intel Galileo Gen 2 (probabl
 
 ##Dependencies##
 - mraa library (https://github.com/intel-iot-devkit/mraa)
+- gcc
+- a terminal client (for linux, regular terminal will work fine. for windows, use putty or similar client)
 
 ##Usage
 Just run compileFFT.sh to generate binaries and run:
@@ -17,7 +19,9 @@ Just run compileFFT.sh to generate binaries and run:
 
 Default configuration (N=256) requires at least 128 horizontal lines on serial output screen
 
-Reads analog input from Analog Pin 0 by default (change in define, see below).
+Reads analog input from Analog Pin 0 by default (change in define, see below)
+
+Connection with serial port is highly discouraged. The data transfer rate will drop the frame rate of output graphic. Use ssh connection with a good network signal for better results.
 
 ##Parameters
 Run fft executable with optional parameters to adjust output graphic:
