@@ -11,6 +11,27 @@ Also, with some adaptations this program works with Intel Galileo Gen 2 (probabl
 ##Dependencies##
 - mraa library (https://github.com/intel-iot-devkit/mraa)
 
+##Usage
+Just run compileFFT.sh to generate binaries and run:
+- ./bin/fft (may require administrative privileges due to mraa ADC read)
+
+Default configuration (N=256) requires at least 128 horizontal lines on serial output screen
+
+Reads analog input from Analog Pin 0 by default (change in define, see below).
+
+##Parameters
+Run fft executable with optional parameters to adjust output graphic:
+- ./bin/fft yMax (new maximum amplitude to y axis)
+- ./bin/fft yMax lines (new maximum amplitude to y axis and new vertical size of output graphic)
+
+Edit the defines in fft.c source file to adjust performance.
+- Increase N for better resolutions (output graphic may not work! You need to adjust manually)
+- Increase DELTA for noise filtering
+- Change default Analog In Pin
+- Change yMax to set new maximum amplitude to y axis (must be a float)
+- Change lines to increase vertical size of output graphic (must be a float)
+
+
 ##Tests and performance considerations##
 - Intel Edison (main processor) with Ublinux:
    * Sampling rate: 10,2k samples/sec
