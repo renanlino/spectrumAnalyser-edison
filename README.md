@@ -29,7 +29,7 @@ Run fft executable with optional parameters to adjust output graphic:
 - ./bin/fft yMax lines (new maximum amplitude to y axis and new vertical size of output graphic)
 
 Edit the defines in fft.c source file to adjust performance.
-- Increase N for better resolutions (output graphic may not work! You need to adjust manually)
+- Increase N for better resolutions (output graphic may not work! You need to adjust manually. must be a power of 2)
 - Increase DELTA for noise filtering
 - Change default Analog In Pin
 - Change yMax to set new maximum amplitude to y axis (must be a float)
