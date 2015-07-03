@@ -1,5 +1,9 @@
 #Spectrum Analyzer for Intel Edison#
 ##A simple spectrum analyzer for Intel Edison##
+
+Check the Instructables tutorial! 
+http://www.instructables.com/id/Spectrum-Analyzer-with-Intel-Edison/
+
 With this program you will be able to use your Intel Edison to visualize electric signals in frequency domain.
 
 The output is a simple text-graphic interface, showing the Amplitude x Frequency graphic in serial console.
