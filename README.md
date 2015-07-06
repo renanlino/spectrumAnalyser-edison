@@ -33,7 +33,7 @@ Run fft executable with optional parameters to adjust output graphic:
 - ./bin/fft yMax lines (new maximum amplitude to y axis and new vertical size of output graphic)
 
 Edit the defines in fft.c source file to adjust performance.
-- Increase N for better resolutions (output graphic may not work! You need to adjust manually. must be a power of 2)
+- Increase N for better resolutions (output graphic may not work if you pick N > 256! You need to adjust manually. Must be a power of 2)
 - Increase DELTA for noise filtering
 - Change default Analog In Pin
 - Change yMax to set new maximum amplitude to y axis (must be a float)
@@ -42,13 +42,13 @@ Edit the defines in fft.c source file to adjust performance.
 
 ##Tests and performance considerations##
 - Intel Edison (main processor) with Ublinux:
-   * Sampling rate: 10,2k samples/sec
-   * Highest frequency: ~5,1k Hz
+   * Sampling rate: 10.2k samples/sec
+   * Highest frequency: ~5.1k Hz
    * Frequency resolution (256 samples): ~40 Hz
 
 - Intel Edison (main processor) with Yocto:
   * Equal to Ubilinux
 
 - Intel Galileo with Yocto:
-   * Sampling rate: 3,6k samples/sec
-   * Highest frequency: ~1,8k Hz
+   * Sampling rate: 3.6k samples/sec
+   * Highest frequency: ~1.8k Hz
