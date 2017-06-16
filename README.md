@@ -1,7 +1,7 @@
-#Spectrum Analyzer for Intel Edison#
-##A simple spectrum analyzer for Intel Edison##
+# Spectrum Analyzer for Intel Edison
+## A simple spectrum analyzer for Intel Edison
 
-Check the Instructables tutorial! 
+Check the Instructables tutorial!
 http://www.instructables.com/id/Spectrum-Analyzer-with-Intel-Edison/
 
 With this program you will be able to use your Intel Edison to visualize electric signals in frequency domain.
@@ -12,12 +12,13 @@ Due to mraa library and hardware limitations, the maximum frequency is limited t
 
 Also, with some adaptations this program works with Intel Galileo Gen 2 (probably with Gen 1 too), limited to ~1,8 KHz. Raspberry Pi may be used too (not tested).
 
-##Dependencies##
+## Dependencies
+
 - mraa library (https://github.com/intel-iot-devkit/mraa)
 - gcc
 - a terminal client (for linux, regular terminal will work fine. for windows, use putty or similar client)
 
-##Usage
+## Usage
 Just run compileFFT.sh to generate binaries and run:
 - ./bin/fft (may require administrative privileges due to mraa ADC read)
 
@@ -27,7 +28,7 @@ Reads analog input from Analog Pin 0 by default (change in define, see below)
 
 Connection with serial port is highly discouraged. The data transfer rate will drop the frame rate of output graphic. Use ssh connection with a good network signal for better results.
 
-##Parameters
+## Parameters
 Run fft executable with optional parameters to adjust output graphic:
 - ./bin/fft yMax (new maximum amplitude to y axis)
 - ./bin/fft yMax lines (new maximum amplitude to y axis and new vertical size of output graphic)
@@ -40,7 +41,7 @@ Edit the defines in fft.c source file to adjust performance.
 - Change lines to increase vertical size of output graphic (must be a float)
 
 
-##Tests and performance considerations##
+## Tests and performance considerations
 - Intel Edison (main processor) with Ublinux:
    * Sampling rate: 10.2k samples/sec
    * Highest frequency: ~5.1k Hz
